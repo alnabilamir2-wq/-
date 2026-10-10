@@ -12,19 +12,7 @@ export type VoiceSignal = {
 let remoteAudioElement: HTMLAudioElement | null = null;
 
 function getIceServers() {
-  const turnUrls = (process.env.EXPO_PUBLIC_TURN_URLS ?? "")
-    .split(",")
-    .map((url: string) => url.trim())
-    .filter(Boolean);
-  const servers: Array<Record<string, unknown>> = [{ urls: "stun:stun.l.google.com:19302" }];
-  if (turnUrls.length > 0 && process.env.EXPO_PUBLIC_TURN_USERNAME && process.env.EXPO_PUBLIC_TURN_CREDENTIAL) {
-    servers.push({
-      urls: turnUrls,
-      username: process.env.EXPO_PUBLIC_TURN_USERNAME,
-      credential: process.env.EXPO_PUBLIC_TURN_CREDENTIAL,
-    });
-  }
-  return servers;
+  return [{ urls: "stun:stun.l.google.com:19302" }];
 }
 
 export function getVoiceWebSocketUrl() {
