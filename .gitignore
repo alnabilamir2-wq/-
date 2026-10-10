@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+web-dist/
+dist/
+android/
+*.zip
+*.aab
+*.apk
+*.jks
+wasel-play-signing.txt
+.env
+.env.*
+!.env.example

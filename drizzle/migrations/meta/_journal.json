@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1791591932414,
+      "tag": "0000_keen_shiver_man",
+      "breakpoints": true
+    }
+  ]
+}
